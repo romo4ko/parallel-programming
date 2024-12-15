@@ -1,0 +1,42 @@
+@startuml diagram
+
+class GpuSpec {
+    +string Name
+    +int Memory
+    +int Cores
+}
+
+class CpuSpec {
+    +string Name
+    +int Cores
+    +double Frequency
+}
+
+class RamSpec {
+    +string Type
+    +int Size
+}
+
+class LanSpec {
+    +string AdapterName
+    +double Speed
+}
+
+class ClusterNode {
+    +CpuSpec Cpu
+    +GpuSpec Gpu
+    +RamSpec Ram
+    +LanSpec Lan
+}
+
+class Cluster {
+    +List<ClusterNode> Nodes
+    +AddNode(ClusterNode node)
+}
+
+ClusterNode --> GpuSpec
+ClusterNode --> CpuSpec
+ClusterNode --> RamSpec
+ClusterNode --> LanSpec
+Cluster --> ClusterNode
+@enduml

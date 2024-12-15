@@ -1,0 +1,5 @@
+1
+AMD-Ryzen 12 4.2
+NvidiaRtx3090 24576 10496
+DDR5 65536
+IntelEthernet 2.5
